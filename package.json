@@ -1,0 +1,11 @@
+{
+  "name": "job_board_backend",
+  "version": "1.0.0",
+  "description": "Job board backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dale Sakamoto, Rhys Previte, Kyle Barthelmes",
+  "license": "ISC"
+}
