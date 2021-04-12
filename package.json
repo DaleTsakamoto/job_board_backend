@@ -4,7 +4,9 @@
   "description": "Job board backend",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "per-env",
+    "start:development": "nodemon -r dotenv/config ./bin/www",
+    "start:production": "node ./bin/www"
   },
   "author": "Dale Sakamoto, Rhys Previte, Kyle Barthelmes",
   "license": "ISC",
