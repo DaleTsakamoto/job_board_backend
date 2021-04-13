@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     salary: DataTypes.INTEGER,
     hiringProcess: DataTypes.STRING
   }, {});
-  JobPosting.associate = function(models) {
-    // associations can be defined here
+  JobPosting.associate = function (models) {
+    JobPosting.hasMany(models.JobsApplied, { foreignKey: 'jobId' })
   };
   return JobPosting;
 };

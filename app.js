@@ -4,6 +4,7 @@ const cors = require('cors');
 const csurf = require('csurf');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
+const User = require('./db/models/user');
 
 const app = express();
 
