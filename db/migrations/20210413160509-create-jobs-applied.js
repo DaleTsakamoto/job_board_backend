@@ -9,10 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: { model: 'Users' }
       },
       jobId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: { model: 'JobPostings' }
       },
       accepted: {
         type: Sequelize.BOOLEAN
