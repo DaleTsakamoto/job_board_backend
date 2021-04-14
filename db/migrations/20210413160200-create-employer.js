@@ -11,11 +11,19 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
+      },
       industry: {
         type: Sequelize.STRING
       },
       website: {
         type: Sequelize.STRING
+      },
+      hashedPassword: {
+        type: Sequelize.STRING.BINARY
       },
       createdAt: {
         allowNull: false,

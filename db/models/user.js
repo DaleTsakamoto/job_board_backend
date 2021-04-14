@@ -10,6 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     bio: DataTypes.STRING,
     resume: DataTypes.STRING,
+    location: DataTypes.STRING,
+    experience: DataTypes.INTEGER,
     hashedPassword: DataTypes.STRING
   }, {});
   User.associate = function (models) {

@@ -25,6 +25,12 @@ module.exports = {
       resume: {
         type: Sequelize.STRING
       },
+      location: {
+        type: Sequelize.STRING
+      },
+      experience: {
+        type: Sequelize.INTEGER
+      },
       hashedPassword: {
         type: Sequelize.STRING.BINARY
       },

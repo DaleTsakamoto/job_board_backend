@@ -1,33 +1,22 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('JobPostings', {
+    return queryInterface.createTable('EmployerUserRatings', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      position: {
-        type: Sequelize.STRING
-      },
-      description: {
-        type: Sequelize.STRING
-      },
       employerId: {
         type: Sequelize.INTEGER,
         references: { model: 'Employers' }
       },
-      salary: {
-        type: Sequelize.INTEGER
+      userId: {
+        type: Sequelize.INTEGER,
+        references: { model: 'Users' }
       },
-      hiringProcess: {
-        type: Sequelize.STRING
-      },
-      location: {
-        type: Sequelize.STRING
-      },
-      experience: {
+      rating: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -41,6 +30,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('JobPostings');
+    return queryInterface.dropTable('EmployerUserRatings');
   }
 };

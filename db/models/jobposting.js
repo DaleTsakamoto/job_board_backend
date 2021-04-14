@@ -5,6 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     employerId: DataTypes.INTEGER,
     salary: DataTypes.INTEGER,
+    location: DataTypes.STRING,
+    experience: DataTypes.INTEGER,
     hiringProcess: DataTypes.STRING
   }, {});
   JobPosting.associate = function (models) {
