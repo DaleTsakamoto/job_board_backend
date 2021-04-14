@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { jwtConfig } = require('../config');
-const { User } = require('../db/models');
+const { User, Skill, JobPosting, Employer } = require('../db/models');
 
 const { secret, expiresIn } = jwtConfig;
 
@@ -41,7 +41,12 @@ const restoreUser = (req, res, next) => {
 
     try {
       const { id } = jwtPayload.data;
-      req.user = await User.findByPk(id);
+      req.user = await User.findOne({
+        include: [Skill, JobPosting],
+        where: {
+          id: id
+        }
+      });
     } catch (e) {
       e.status = 401;
       return next(e);

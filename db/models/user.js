@@ -13,8 +13,19 @@ module.exports = (sequelize, DataTypes) => {
     hashedPassword: DataTypes.STRING
   }, {});
   User.associate = function (models) {
+    const columnMapping = {
+      through: 'UserSkill',
+      otherKey: 'skillsId',
+      foreignKey: 'userId'
+    }
+    const columnMapping2 = {
+      through: 'JobsApplied',
+      otherKey: 'jobId',
+      foreignKey: 'userId'
+    }
     User.hasMany(models.JobsApplied, { foreignKey: 'userId' })
-    User.hasMany(models.UserSkill, { foreignKey: 'userId' })
+    User.belongsToMany(models.Skill, columnMapping)
+    User.belongsToMany(models.JobPosting, columnMapping2)
   };
   return User;
 };

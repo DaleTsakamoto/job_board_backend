@@ -4,7 +4,12 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   Skill.associate = function (models) {
-    Skill.belongsToMany(models.User, { through: models.UserSkill })
+    const columnMapping = {
+      through: 'UserSkill',
+      otherKey: 'userId',
+      foreignKey: 'skillsId'
+    }
+    // Skill.belongsToMany(models.User, columnMapping)
   };
   return Skill;
 };
