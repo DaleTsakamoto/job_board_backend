@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Employer.associate = function (models) {
     Employer.hasMany(models.JobPosting, { foreignKey: 'employerId' })
+    Employer.hasMany(models.EmployerUserRating, { foreignKey: 'employerId' })
   };
   return Employer;
 };
