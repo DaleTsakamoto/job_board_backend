@@ -17,7 +17,7 @@ router.post('/signup', asyncHandler(async (req, res) => {
     firstName, email, hashedPassword
   })
 
-  const token = setTokenCookie(res, user);
+  await setTokenCookie(res, user);
 
   return res.json(user)
 
@@ -33,6 +33,7 @@ router.post('/login', asyncHandler(async (req, res) => {
       user.hashedPassword.toString()
     )
     if (passwordsMatch) {
+      await setTokenCookie(res, user);
       res.json('User logged in!')
     }
   }
