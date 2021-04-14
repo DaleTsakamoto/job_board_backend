@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       otherKey: 'userId',
       foreignKey: 'skillsId'
     }
-    Skill.belongsToMany(models.User, columnMapping)
+    // Skill.belongsToMany(models.User, columnMapping)
   };
   return Skill;
 };

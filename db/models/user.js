@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     }
     User.hasMany(models.JobsApplied, { foreignKey: 'userId' })
     User.belongsToMany(models.Skill, columnMapping)
-    User.belongsToMany(models.JobPosting, columnMapping)
+    User.belongsToMany(models.JobPosting, columnMapping2)
   };
   return User;
 };
