@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { jwtConfig } = require('../config');
+const { User } = require('../db/models');
 
 const { secret, expiresIn } = jwtConfig;
 
@@ -30,4 +31,26 @@ const setTokenCookie = (res, user) => {
   return token;
 }
 
-module.exports = { setTokenCookie }
+const restoreUser = (req, res, next) => {
+  const { token } = req.cookies;
+
+  return jwt.verify(token, secret, null, async (err, jwtPayload) => {
+    if (err) {
+      return next();
+    }
+
+    try {
+      const { id } = jwtPayload.data;
+      req.user = await User.findByPk(id);
+    } catch (e) {
+      e.status = 401;
+      return next(e);
+    }
+    if (!req.user) {
+      res.set('WWW-Authenticate', 'Bearer').status(401).end();
+    }
+    return next();
+  })
+}
+
+module.exports = { setTokenCookie, restoreUser }

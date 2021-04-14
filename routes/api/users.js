@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   res.json('Welcome to the Users Route!')
 })
 
-router.post('/', asyncHandler(async (req, res) => {
+router.post('/signup', asyncHandler(async (req, res) => {
   const { firstName, email, password } = req.body;
   const hashedPassword = bcrypt.hashSync(password);
   const user = await User.create({
@@ -33,12 +33,10 @@ router.post('/login', asyncHandler(async (req, res) => {
       user.hashedPassword.toString()
     )
     if (passwordsMatch) {
-      req.session.auth = {
-        userId: user.id
-      }
+      res.json('User logged in!')
     }
   }
-  res.json('User logged in!')
+  res.json('Auth failed!')
 
 }))
 
