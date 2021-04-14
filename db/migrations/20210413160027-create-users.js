@@ -15,7 +15,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
       },
       bio: {
         type: Sequelize.STRING
@@ -24,7 +26,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       hashedPassword: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING.BINARY
       },
       createdAt: {
         allowNull: false,
