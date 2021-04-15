@@ -55,7 +55,6 @@ router.post('/login', asyncHandler(async (req, res) => {
   }
   if (passwordsMatch) {
     await setTokenCookie(res, user);
-    console.log("THIS WORKED!!!", user)
     return res.json({ user })
   }
   return res.json('Auth failed!')
