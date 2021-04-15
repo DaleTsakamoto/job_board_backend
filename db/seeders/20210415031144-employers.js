@@ -67,15 +67,15 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
-      {
-        name: 'Google',
-        email: 'google@gmail.com',
-        industry: 'tech',
-        website: 'https://www.google.com/',
-        hashedPassword: bcrypt.hashSync('password'),
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
+      // {
+      //   name: 'Google',
+      //   email: 'google@gmail.com',
+      //   industry: 'tech',
+      //   website: 'https://www.google.com/',
+      //   hashedPassword: bcrypt.hashSync('password'),
+      //   createdAt: new Date(),
+      //   updatedAt: new Date()
+      // },
       {
         name: 'JP Morgan',
         email: 'jpmorgan@gmail.com',

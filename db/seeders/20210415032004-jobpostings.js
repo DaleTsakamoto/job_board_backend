@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Employers', [
+    return queryInterface.bulkInsert('JobPostings', [
       {
         position: 'Full Stack Developer',
         description: 'Looking for someone who can work on our MERN stack',
@@ -105,7 +105,7 @@ module.exports = {
       {
         position: 'Backend Engineer',
         description: 'Looking for engineer who writes clean code. Preferred experience in Python',
-        employerId: 10,
+        employerId: 8,
         salary: 95000,
         hiringProcess: 'zoom interview',
         location: 'remote',

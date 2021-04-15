@@ -3,7 +3,11 @@ module.exports = (sequelize, DataTypes) => {
   const JobPosting = sequelize.define('JobPosting', {
     position: DataTypes.STRING,
     description: DataTypes.STRING,
-    employerId: DataTypes.INTEGER,
+    // employerId: DataTypes.INTEGER,
+    employerId: {
+      type: DataTypes.INTEGER,
+      references: {model: 'Employers'}
+    },
     salary: DataTypes.INTEGER,
     location: DataTypes.STRING,
     experience: DataTypes.INTEGER,
