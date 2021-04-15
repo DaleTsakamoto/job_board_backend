@@ -163,6 +163,16 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        name: 'HTML',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'CSS',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
   },
 
