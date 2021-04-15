@@ -41,12 +41,20 @@ const restoreUser = (req, res, next) => {
 
     try {
       const { id } = jwtPayload.data;
+      if (!req.body.employer) {
       req.user = await User.findOne({
         include: [Skill, JobPosting],
         where: {
-          id: id
+          id
         }
-      });
+      })
+    } else {
+      req.user = await Employer.findOne({
+        where: {
+          id
+        }
+      })
+    }
     } catch (e) {
       e.status = 401;
       return next(e);
