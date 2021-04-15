@@ -4,100 +4,164 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Skills', [
       {
-        name: 'JavaScript'
+        name: 'JavaScript',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Python'
+        name: 'Python',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Java'
+        name: 'Java',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'C++'
+        name: 'C++',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'C'
+        name: 'C',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'C#'
+        name: 'C#',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Ruby'
+        name: 'Ruby',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'PHP'
+        name: 'PHP',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Go'
+        name: 'Go',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'R'
+        name: 'R',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Swift'
+        name: 'Swift',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'React'
+        name: 'React',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Angular'
+        name: 'Angular',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Vue'
+        name: 'Vue',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Ember'
+        name: 'Ember',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Redux'
+        name: 'Redux',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Bootstrap'
+        name: 'Bootstrap',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Jquery'
+        name: 'Jquery',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Express'
+        name: 'Express',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Flask'
+        name: 'Flask',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Django'
+        name: 'Django',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Rubyonrails'
+        name: 'Rubyonrails',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Sequelize'
+        name: 'Sequelize',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'SQLAlchemy'
+        name: 'SQLAlchemy',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'PostgreSQL'
+        name: 'PostgreSQL',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'MySQL'
+        name: 'MySQL',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'MongoDB'
+        name: 'MongoDB',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'NoSQL'
+        name: 'NoSQL',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Redis'
+        name: 'Redis',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'AWS'
+        name: 'AWS',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Docker'
+        name: 'Docker',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
-        name: 'Kubernetes'
+        name: 'Kubernetes',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
     ], {});
   },
