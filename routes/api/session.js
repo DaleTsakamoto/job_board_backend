@@ -10,10 +10,10 @@ const router = express.Router();
 router.post('/signup', asyncHandler(async (req, res) => {
   let user;
   if (!req.body.employer) {
-    const { firstName, email, password } = req.body;
+    const { firstName, lastName, email, password } = req.body;
     const hashedPassword = bcrypt.hashSync(password);
     user = await User.create({
-      firstName, email, hashedPassword
+      firstName, lastName, email, hashedPassword
     })
   } else {
     const { name, email, password, industry, website } = req.body;
@@ -24,7 +24,7 @@ router.post('/signup', asyncHandler(async (req, res) => {
   }
 
   await setTokenCookie(res, user);
-  return res.json({user})
+  return res.json({ user })
 
 }))
 
@@ -41,11 +41,11 @@ router.post('/login', asyncHandler(async (req, res) => {
       }
     });
   } else {
-      user = await Employer.findOne({
-        where: {
-          email
-        }
-      })
+    user = await Employer.findOne({
+      where: {
+        email
+      }
+    })
   }
   if (user) {
     passwordsMatch = bcrypt.compareSync(
@@ -58,8 +58,8 @@ router.post('/login', asyncHandler(async (req, res) => {
     return res.json({ user })
   }
   return res.json('Auth failed!')
- 
-  })
+
+})
 )
 
 /******Restore session user********/
