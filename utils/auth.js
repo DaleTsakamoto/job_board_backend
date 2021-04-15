@@ -50,6 +50,7 @@ const restoreUser = (req, res, next) => {
       })
     } else {
       req.user = await Employer.findOne({
+        include: [JobPosting],
         where: {
           id
         }
