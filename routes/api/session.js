@@ -55,11 +55,13 @@ router.post('/login', asyncHandler(async (req, res) => {
   }
   if (passwordsMatch) {
     await setTokenCookie(res, user);
-    res.json(user)
+    console.log("THIS WORKED!!!", user)
+    return res.json({ user })
   }
-  res.json('Auth failed!')
+  return res.json('Auth failed!')
 
-}))
+  })
+)
 
 /******Restore session user********/
 router.get('/', restoreUser, asyncHandler(async (req, res) => {

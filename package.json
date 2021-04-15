@@ -32,5 +32,14 @@
     "pg": "^8.5.1",
     "sequelize": "^6.6.2",
     "sequelize-cli": "^6.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaleTsakamoto/job_board_backend.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DaleTsakamoto/job_board_backend/issues"
+  },
+  "homepage": "https://github.com/DaleTsakamoto/job_board_backend#readme"
 }
