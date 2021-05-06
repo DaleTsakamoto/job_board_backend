@@ -6,7 +6,9 @@
   "scripts": {
     "start": "per-env",
     "start:development": "nodemon -r dotenv/config ./bin/www",
-    "start:production": "node ./bin/www"
+    "start:production": "node ./bin/www",
+    "sequelize": "sequelize",
+    "sequelize-cli": "sequelize-cli"
   },
   "author": "Dale Sakamoto, Rhys Previte, Kyle Barthelmes",
   "license": "ISC",
@@ -23,7 +25,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
+    "express-graphql": "^0.12.0",
     "express-validator": "^6.10.0",
+    "graphql": "^15.5.0",
     "helmet": "^4.4.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
